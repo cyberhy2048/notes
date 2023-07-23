@@ -2,7 +2,7 @@
 #define __MYSTRING__
 
 class String
-{
+{ 
 public:                                 
    String(const char* cstr=0);                     
    String(const String& str);                    
@@ -42,7 +42,7 @@ String& String::operator=(const String& str)
 
    delete[] m_data;
    m_data = new char[ strlen(str.m_data) + 1 ];
-   strcpy(m_data, str.m_data);
+   strcpy(m_data, str.m_data);  
    return *this;
 }
 
@@ -59,7 +59,7 @@ using namespace std;
 ostream& operator<<(ostream& os, const String& str)
 {
    os << str.get_c_str();
-   return os;
+   return os; 
 }
 
 #endif
